@@ -1,6 +1,19 @@
 console.log("Test");
 
-function addition(i, j) {
-  let k = i + j;
-  alert("The result is" + k);
+function calculate(i, operator, j) {
+  let k;
+  switch (operator) {
+    case "+":
+      k = i + j;
+      break;
+    case "-":
+      k = i - j;
+      break;
+    case "*":
+      k = i * j;
+      break;
+    case "/":
+      k = i / j;
+  }
+  alert("The result is " + k);
 }
