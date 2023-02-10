@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>Testing Git</p>
+    <p>Simple Calculator</p>
 
     <input type="number" id="input1" />
-    <span>+</span>
-    <input type="numbers" id="input2" />
+    <select name="" id="operator">
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+    <input type="number" id="input2" />
 
     <button
       type="button"
-      onclick="addition(Number(document.getElementById('input1').value), Number(document.getElementById('input2').value))"
+      onclick="calculate(Number(document.getElementById('input1').value), document.getElementById('operator').value, Number(document.getElementById('input2').value))"
     >
       Print Result
     </button>
